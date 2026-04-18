@@ -14096,10 +14096,10 @@ body.feeding-cleaning-page {
   gap: 18px;
 }
 
-.daily-care-comfort__copy h2,
-.daily-care-comfort__copy p,
-.feeding-cleaning-standards__copy h2,
-.feeding-cleaning-standards__copy p,
+.daily-care-comfort__copy > h2,
+.daily-care-comfort__copy > p,
+.feeding-cleaning-standards__copy > h2,
+.feeding-cleaning-standards__copy > p,
 .feeding-cleaning-standards__list li {
   color: #fff7ee;
 }
@@ -14289,6 +14289,7 @@ body.feeding-cleaning-page {
 :root[data-theme="dark"] .daily-care-cycle__snapshot,
 :root[data-theme="dark"] .daily-care-cycle__step,
 :root[data-theme="dark"] .daily-care-updates__shell,
+:root[data-theme="dark"] .daily-care-updates__visual,
 :root[data-theme="dark"] .feeding-cleaning-foundation__copy,
 :root[data-theme="dark"] .feeding-cleaning-foundation__visual,
 :root[data-theme="dark"] .feeding-cleaning-plan__shell,
@@ -14308,6 +14309,7 @@ body.feeding-cleaning-page {
 :root[data-theme="dark"] .daily-care-cycle__snapshot,
 :root[data-theme="dark"] .daily-care-cycle__step,
 :root[data-theme="dark"] .daily-care-updates__shell,
+:root[data-theme="dark"] .daily-care-updates__visual,
 :root[data-theme="dark"] .feeding-cleaning-foundation__copy,
 :root[data-theme="dark"] .feeding-cleaning-foundation__visual,
 :root[data-theme="dark"] .feeding-cleaning-plan__visual,
