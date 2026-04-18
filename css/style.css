@@ -15757,3 +15757,180 @@ body:not([class]) .hero-slide-copy .hero-actions {
     margin-inline: auto 0;
   }
 }
+
+/* Unified internal page banner typography */
+:is(
+  .about-page-banner__kicker,
+  .contact-page-banner__kicker,
+  .gallery-page-banner__kicker,
+  .availability-page-banner__kicker,
+  .suites-page-banner__kicker,
+  .boarding-page-banner__kicker,
+  .daily-care-page-banner__kicker,
+  .feeding-cleaning-page-banner__kicker
+) {
+  font-family: "Fredoka", "Trebuchet MS", sans-serif;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.14em;
+}
+
+:is(
+  .about-page-banner__crumbs,
+  .contact-page-banner__crumbs,
+  .gallery-page-banner__crumbs,
+  .availability-page-banner__crumbs,
+  .suites-page-banner__crumbs,
+  .boarding-page-banner__crumbs,
+  .daily-care-page-banner__crumbs,
+  .feeding-cleaning-page-banner__crumbs
+) {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 14px;
+  margin-top: 20px;
+  font-family: "Fredoka", "Trebuchet MS", sans-serif;
+  font-size: 1.02rem !important;
+  font-weight: 700 !important;
+  line-height: 1.35;
+  color: rgba(255, 248, 239, 0.96) !important;
+  text-shadow: 0 6px 18px rgba(30, 18, 10, 0.22) !important;
+}
+
+:is(
+  .about-page-banner__crumbs,
+  .contact-page-banner__crumbs,
+  .gallery-page-banner__crumbs,
+  .availability-page-banner__crumbs,
+  .suites-page-banner__crumbs,
+  .boarding-page-banner__crumbs,
+  .daily-care-page-banner__crumbs,
+  .feeding-cleaning-page-banner__crumbs
+) :is(a, span, strong) {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 700 !important;
+  line-height: inherit;
+  text-shadow: inherit;
+}
+
+:is(
+  .about-page-banner__crumbs,
+  .contact-page-banner__crumbs,
+  .gallery-page-banner__crumbs,
+  .availability-page-banner__crumbs,
+  .suites-page-banner__crumbs,
+  .boarding-page-banner__crumbs,
+  .daily-care-page-banner__crumbs,
+  .feeding-cleaning-page-banner__crumbs
+) a,
+:is(
+  .about-page-banner__crumbs,
+  .contact-page-banner__crumbs,
+  .gallery-page-banner__crumbs,
+  .availability-page-banner__crumbs,
+  .suites-page-banner__crumbs,
+  .boarding-page-banner__crumbs,
+  .daily-care-page-banner__crumbs,
+  .feeding-cleaning-page-banner__crumbs
+) strong {
+  color: #fff8ef !important;
+}
+
+:is(
+  .about-page-banner__crumbs,
+  .contact-page-banner__crumbs,
+  .gallery-page-banner__crumbs,
+  .availability-page-banner__crumbs,
+  .suites-page-banner__crumbs,
+  .boarding-page-banner__crumbs,
+  .daily-care-page-banner__crumbs,
+  .feeding-cleaning-page-banner__crumbs
+) span {
+  color: #ffd08a !important;
+}
+
+@media (max-width: 560px) {
+  :is(
+    .about-page-banner__kicker,
+    .contact-page-banner__kicker,
+    .gallery-page-banner__kicker,
+    .availability-page-banner__kicker,
+    .suites-page-banner__kicker,
+    .boarding-page-banner__kicker,
+    .daily-care-page-banner__kicker,
+    .feeding-cleaning-page-banner__kicker
+  ) {
+    font-size: 0.88rem !important;
+  }
+
+  :is(
+    .about-page-banner__crumbs,
+    .contact-page-banner__crumbs,
+    .gallery-page-banner__crumbs,
+    .availability-page-banner__crumbs,
+    .suites-page-banner__crumbs,
+    .boarding-page-banner__crumbs,
+    .daily-care-page-banner__crumbs,
+    .feeding-cleaning-page-banner__crumbs
+  ) {
+    font-size: 0.9rem !important;
+  }
+}
+
+/* Direct breadcrumb lock for pages that were still rendering lighter */
+:is(
+  body.availability-page .availability-page-banner__crumbs,
+  body.gallery-page .gallery-page-banner__crumbs,
+  body.suites-page .suites-page-banner__crumbs
+) {
+  display: inline-flex !important;
+  flex-wrap: wrap !important;
+  justify-content: flex-start !important;
+  gap: 14px !important;
+  margin-top: 20px !important;
+  font-family: "Fredoka", "Trebuchet MS", sans-serif !important;
+  font-size: 1.02rem !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  color: #fff8ef !important;
+  text-shadow: 0 6px 18px rgba(30, 18, 10, 0.22) !important;
+}
+
+:is(
+  body.availability-page .availability-page-banner__crumbs,
+  body.gallery-page .gallery-page-banner__crumbs,
+  body.suites-page .suites-page-banner__crumbs
+) :is(a, strong, span) {
+  font-family: inherit !important;
+  font-size: inherit !important;
+  font-weight: 700 !important;
+  line-height: inherit !important;
+  text-shadow: inherit !important;
+}
+
+body.availability-page .availability-page-banner__crumbs a,
+body.availability-page .availability-page-banner__crumbs strong,
+body.gallery-page .gallery-page-banner__crumbs a,
+body.gallery-page .gallery-page-banner__crumbs strong,
+body.suites-page .suites-page-banner__crumbs a,
+body.suites-page .suites-page-banner__crumbs strong {
+  color: #fff8ef !important;
+}
+
+body.availability-page .availability-page-banner__crumbs span,
+body.gallery-page .gallery-page-banner__crumbs span,
+body.suites-page .suites-page-banner__crumbs span {
+  color: #ffd08a !important;
+}
+
+@media (max-width: 560px) {
+  :is(
+    body.availability-page .availability-page-banner__crumbs,
+    body.gallery-page .gallery-page-banner__crumbs,
+    body.suites-page .suites-page-banner__crumbs
+  ) {
+    font-size: 0.9rem !important;
+  }
+}
