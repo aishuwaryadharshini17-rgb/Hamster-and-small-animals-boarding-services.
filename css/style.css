@@ -13969,6 +13969,10 @@ body.feeding-cleaning-page {
   object-fit: cover;
 }
 
+.daily-care-rhythm__visual img {
+  height: clamp(340px, 36vw, 500px);
+}
+
 .daily-care-rhythm__visual figcaption,
 .daily-care-cycle__snapshot figcaption,
 .daily-care-updates__visual figcaption,
@@ -14376,7 +14380,25 @@ body.feeding-cleaning-page {
 :root[data-theme="dark"] .feeding-cleaning-plan__card p,
 :root[data-theme="dark"] .feeding-cleaning-pack__content p,
 :root[data-theme="dark"] .feeding-cleaning-pack__check p {
-  color: rgba(255, 245, 232, 0.76);
+  color: rgba(255, 248, 239, 0.92);
+}
+
+:root[data-theme="dark"] .daily-care-rhythm__visual figcaption,
+:root[data-theme="dark"] .daily-care-cycle__snapshot figcaption,
+:root[data-theme="dark"] .daily-care-updates__visual figcaption,
+:root[data-theme="dark"] .feeding-cleaning-foundation__visual figcaption {
+  background: linear-gradient(180deg, rgba(30, 24, 19, 0.98), rgba(18, 14, 11, 0.94));
+  border-top: 1px solid rgba(255, 235, 208, 0.1);
+}
+
+:root[data-theme="dark"] body.daily-care-page .daily-care-rhythm__visual figcaption {
+  background: linear-gradient(180deg, rgba(28, 22, 17, 0.99), rgba(14, 11, 9, 0.97)) !important;
+  color: #fff8ef !important;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.18);
+}
+
+:root[data-theme="dark"] body.daily-care-page .daily-care-rhythm__facts span {
+  color: #fff8ef !important;
 }
 
 :root[data-theme="dark"] .daily-care-comfort,
