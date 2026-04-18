@@ -8527,6 +8527,33 @@ body.contact-page {
   background: rgba(255, 255, 255, 0.04);
 }
 
+:root[data-theme="dark"] body.contact-page {
+  background:
+    radial-gradient(circle at 12% 10%, rgba(239, 123, 35, 0.12), transparent 24%),
+    radial-gradient(circle at 86% 14%, rgba(127, 157, 52, 0.14), transparent 22%),
+    linear-gradient(180deg, #120f0c 0%, #17130f 52%, #090806 100%);
+}
+
+:root[data-theme="dark"] .contact-shell {
+  background:
+    radial-gradient(circle at 18% 0%, rgba(239, 123, 35, 0.12), transparent 20%),
+    radial-gradient(circle at 82% 12%, rgba(127, 157, 52, 0.12), transparent 20%),
+    linear-gradient(180deg, rgba(18, 14, 11, 0.98) 0%, rgba(13, 10, 8, 0.94) 46%, transparent 100%);
+}
+
+:root[data-theme="dark"] .contact-page .section-eyebrow:not(.section-eyebrow--light) {
+  background: rgba(255, 255, 255, 0.08);
+  color: #eaf3d5;
+}
+
+:root[data-theme="dark"] .contact-page .section-eyebrow:not(.section-eyebrow--light)::before {
+  box-shadow: 0 0 0 6px rgba(239, 123, 35, 0.12);
+}
+
+:root[data-theme="dark"] .contact-map-frame iframe {
+  filter: saturate(0.82) brightness(0.84) contrast(1.04);
+}
+
 .about-difference-band {
   overflow: hidden;
   padding: clamp(30px, 4vw, 44px);
@@ -12309,6 +12336,17 @@ body.suites-page {
   color: #eef7d7;
 }
 
+:root[data-theme="dark"] .suite-match-card__index {
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--suite-match-accent) 74%, #2a1a10),
+      color-mix(in srgb, var(--suite-match-accent) 48%, #120b07)
+    );
+  color: #fff8ef;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22);
+}
+
 :root[data-theme="dark"] .suite-spotlight-card,
 :root[data-theme="dark"] .suite-blueprint,
 :root[data-theme="dark"] .suite-match-card,
@@ -13623,6 +13661,12 @@ body.boarding-page .boarding-page-banner__content h1 {
   color: #eef7d7;
 }
 
+:root[data-theme="dark"] .boarding-overview__metric strong {
+  background: linear-gradient(135deg, var(--apricot), #b96019);
+  color: #fffaf2;
+  box-shadow: 0 14px 26px rgba(239, 123, 35, 0.22);
+}
+
 @media (max-width: 1180px) {
   .boarding-page-banner,
   .boarding-overview__layout,
@@ -14290,6 +14334,13 @@ body.feeding-cleaning-page {
 :root[data-theme="dark"] .daily-care-page .section-eyebrow:not(.section-eyebrow--light)::before,
 :root[data-theme="dark"] .feeding-cleaning-page .section-eyebrow:not(.section-eyebrow--light)::before {
   box-shadow: 0 0 0 6px rgba(239, 123, 35, 0.12);
+}
+
+:root[data-theme="dark"] .daily-care-cycle__step span,
+:root[data-theme="dark"] .feeding-cleaning-plan__card span {
+  background: linear-gradient(135deg, var(--apricot), #b96019);
+  color: #fff8ef;
+  box-shadow: 0 12px 24px rgba(239, 123, 35, 0.22);
 }
 
 :root[data-theme="dark"] .daily-care-rhythm__copy h2,
