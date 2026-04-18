@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cozy Critters Stay | Availability</title>
+  <meta
+    name="description"
+    content="Check boarding availability, view open dates, read booking steps, and send a stay request for your small pet."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap"
+    rel="stylesheet"
+  >
+  <script src="js/mode-bootstrap.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="image/logo.png">
+  <link rel="apple-touch-icon" href="image/logo.png">
+</head>
+<body class="availability-page home-two-page">
+  <header class="hero-shell availability-shell" id="availability-top">
+    <nav class="navbar">
+      <a class="brand" href="index.html" aria-label="Cozy Critters Stay home">
+        <span class="brand-mark">
+          <img src="image/logo.png" alt="Cozy Critters Stay logo">
+        </span>
+        <span class="brand-copy"></span>
+      </a>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-button" aria-label="Open navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <div class="nav-links">
+        <div class="nav-main">
+          <details class="nav-dropdown">
+            <summary>Home</summary>
+            <div class="dropdown-menu">
+              <a href="index.html">HomePage 1</a>
+              <a href="home-2.html">HomePage 2</a>
+            </div>
+          </details>
+
+          <a href="about.html">About</a>
+          <details class="nav-dropdown">
+            <summary>Services</summary>
+            <div class="dropdown-menu">
+              <a href="suites.html">Suites</a>
+              <a href="boarding-services.html#boarding-services">Boarding Services</a>
+              <a href="daily-care.html">Daily Care</a>
+              <a href="feeding-cleaning.html">Feeding &amp; Cleaning</a>
+            </div>
+          </details>
+          <a href="gallery.html">Gallery</a>
+          <a href="avalabilty.html" class="active" aria-current="page">Availability</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="nav-tools">
+          <div class="nav-preferences" aria-label="Display settings">
+            <button class="nav-mode-button" type="button" data-mode-toggle="dir" aria-pressed="false">
+              <span class="nav-mode-icon nav-mode-icon--default" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path d="M4 7h10"></path>
+                  <path d="M4 12h7"></path>
+                  <path d="M4 17h14"></path>
+                  <path d="M17 5l3 2-3 2"></path>
+                </svg>
+              </span>
+              <span class="nav-mode-icon nav-mode-icon--active" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path d="M10 7h10"></path>
+                  <path d="M13 12h7"></path>
+                  <path d="M6 17h14"></path>
+                  <path d="M7 5L4 7l3 2"></path>
+                </svg>
+              </span>
+              <span class="sr-only nav-mode-value">LTR</span>
+            </button>
+            <button class="nav-mode-button" type="button" data-mode-toggle="theme" aria-pressed="false">
+              <span class="nav-mode-icon nav-mode-icon--default" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <path d="M12 2.5v2.5"></path>
+                  <path d="M12 19v2.5"></path>
+                  <path d="M4.9 4.9l1.8 1.8"></path>
+                  <path d="M17.3 17.3l1.8 1.8"></path>
+                  <path d="M2.5 12H5"></path>
+                  <path d="M19 12h2.5"></path>
+                  <path d="M4.9 19.1l1.8-1.8"></path>
+                  <path d="M17.3 6.7l1.8-1.8"></path>
+                </svg>
+              </span>
+              <span class="nav-mode-icon nav-mode-icon--active" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path fill="currentColor" stroke="none" d="M18 15.2A7.2 7.2 0 0 1 8.8 6a7.9 7.9 0 1 0 9.2 9.2Z"></path>
+                </svg>
+              </span>
+              <span class="sr-only nav-mode-value">Light</span>
+            </button>
+          </div>
+          <div class="nav-cta">
+            <a class="nav-pill nav-login" href="login.html">Login</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="availability-page-banner" aria-label="Availability page banner">
+      <div class="availability-page-banner__content" data-reveal="up">
+        <span class="availability-page-banner__kicker">Boarding Dates &amp; Waitlist</span>
+        <h1>Availability</h1>
+        <p>Check open stay windows, understand the booking flow, and send your pet's details in one calm step.</p>
+        <div class="availability-page-banner__crumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <strong>Availability</strong>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main class="home-main availability-main">
+    <section class="availability-overview section-shell" id="availability">
+      <div class="availability-overview-grid">
+        <div class="availability-overview-copy" data-reveal="up">
+          <span class="section-eyebrow">Live Boarding Desk</span>
+          <h2>Professional scheduling for your plans.</h2>
+          <p>
+            This page is designed like a small booking dashboard so owners can review open dates, compare stay styles,
+            understand peak periods, and send one organised request without hunting through uneven cards.
+          </p>
+
+          <div class="availability-metrics" aria-label="Availability overview">
+            <article class="availability-metric">
+              <strong>08</strong>
+              <span>Dates currently open in May 2026</span>
+            </article>
+            <article class="availability-metric">
+              <strong>24 hrs</strong>
+              <span>Typicalconfirmation reply window</span>
+            </article>
+            <article class="availability-metric">
+              <strong>03</strong>
+              <span>Suite formats available to book</span>
+            </article>
+          </div>
+
+          <div class="availability-overview-actions">
+            <a class="button primary" href="#booking-request">Request Your Dates</a>
+            <a class="button secondary" href="contact.html">Talk to the Care Team</a>
+          </div>
+        </div>
+
+        <aside class="availability-board" data-reveal="up" style="--reveal-delay: 0.06s;" aria-label="Current stay schedule">
+          <div class="availability-board-head">
+            <div>
+              <span class="availability-panel-kicker">Current schedule</span>
+              <h3>May 2026 availability</h3>
+            </div>
+            <div class="availability-board-legend" aria-label="Date legend">
+              <span class="availability-chip availability-chip--open">Open</span>
+              <span class="availability-chip availability-chip--limited">Few left</span>
+              <span class="availability-chip availability-chip--full">Full</span>
+            </div>
+          </div>
+
+          <div class="availability-board-days" role="list">
+            <article class="availability-board-day availability-board-day--open" role="listitem">
+              <span class="availability-board-date">03</span>
+              <div>
+                <strong>Sun</strong>
+                <small>Willow open</small>
+              </div>
+            </article>
+            <article class="availability-board-day availability-board-day--limited" role="listitem">
+              <span class="availability-board-date">05</span>
+              <div>
+                <strong>Tue</strong>
+                <small>2 spots left</small>
+              </div>
+            </article>
+            <article class="availability-board-day availability-board-day--open" role="listitem">
+              <span class="availability-board-date">09</span>
+              <div>
+                <strong>Sat</strong>
+                <small>Meadow open</small>
+              </div>
+            </article>
+            <article class="availability-board-day availability-board-day--full" role="listitem">
+              <span class="availability-board-date">12</span>
+              <div>
+                <strong>Tue</strong>
+                <small>Fully booked</small>
+              </div>
+            </article>
+            <article class="availability-board-day availability-board-day--limited" role="listitem">
+              <span class="availability-board-date">16</span>
+              <div>
+                <strong>Sat</strong>
+                <small>1 suite left</small>
+              </div>
+            </article>
+            <article class="availability-board-day availability-board-day--open" role="listitem">
+              <span class="availability-board-date">20</span>
+              <div>
+                <strong>Wed</strong>
+                <small>Oak ready</small>
+              </div>
+            </article>
+            <article class="availability-board-day availability-board-day--full" role="listitem">
+              <span class="availability-board-date">24</span>
+              <div>
+                <strong>Sun</strong>
+                <small>Waitlist only</small>
+              </div>
+            </article>
+            <article class="availability-board-day availability-board-day--open" role="listitem">
+              <span class="availability-board-date">28</span>
+              <div>
+                <strong>Thu</strong>
+                <small>Fresh opening</small>
+              </div>
+            </article>
+          </div>
+
+          <div class="availability-board-footer">
+            <strong>Booking note</strong>
+            <p>All dates are subject to availability.</p>
+          </div>
+        </aside>
+      </div>
+
+      <div class="availability-system-grid">
+        <article class="availability-panel" data-reveal="up" style="--reveal-delay: 0.1s;">
+          <span class="availability-panel-kicker">How booking works</span>
+          <h3>Each request moves through one predictable sequence.</h3>
+          <div class="availability-process-list">
+            <article class="availability-process-step">
+              <strong>1</strong>
+              <div>
+                <h4>Choose a stay style  and surface</h4>
+                <p>Choose a suite style for your pet comfort and pets fine refreshments.</p>
+              </div>
+            </article>
+            <article class="availability-process-step">
+              <strong>2</strong>
+              <div>
+                <h4>Select preferred dates</h4>
+                <p>Share your check-in and check-out window so we can match the calmest open slot.</p>
+              </div>
+            </article>
+            <article class="availability-process-step">
+              <strong>3</strong>
+              <div>
+                <h4>Add feeding and routine details</h4>
+                <p>Food habits, cleaning rhythm, and comfort notes help us prepare the space correctly.</p>
+              </div>
+            </article>
+            <article class="availability-process-step">
+              <strong>4</strong>
+              <div>
+                <h4>Receive written confirmation</h4>
+                <p>We reply with confirmed availability, next steps, and alternatives .</p>
+              </div>
+            </article>
+          </div>
+        </article>
+
+        <article class="availability-panel" data-reveal="up" style="--reveal-delay: 0.14s;">
+          <span class="availability-panel-kicker">Stay options</span>
+          <h3>Professionally arranged suite formats.</h3>
+          <div class="availability-suite-list">
+            <article class="availability-suite-card">
+              <div>
+                <strong>Willow Nest</strong>
+                <p>Simple, quiet boarding for short stays with steady daily refreshes and low-stress handling.</p>
+              </div>
+              <span>Rs 650 / night</span>
+            </article>
+            <article class="availability-suite-card">
+              <div>
+                <strong>Meadow Suite</strong>
+                <p>A warmer setup for longer bookings, photo-friendly updates, and a little more room to settle.</p>
+              </div>
+              <span>Rs 850 / night</span>
+            </article>
+            <article class="availability-suite-card">
+              <div>
+                <strong>Oak Care Stay</strong>
+                <p>Best for pets with medication notes,observation,or routines &need consistency.</p>
+              </div>
+              <span>Rs 1100 / night</span>
+            </article>
+          </div>
+        </article>
+
+        <article class="availability-panel" data-reveal="up" style="--reveal-delay: 0.18s;">
+          <span class="availability-panel-kicker">Peak dates and waitlist</span>
+          <h3>High-demand windows are more likely to be full.</h3>
+          <ul class="availability-flag-list">
+            <li>Summer weekends</li>
+            <li>Festival holiday breaks</li>
+            <li>Long-weekend travel dates</li>
+            <li>School vacation weeks</li>
+          </ul>
+          <p class="availability-panel-note">
+            If your first choice is full, we keep your request on the waitlist in received order and confirm by email as soon as a place opens.
+          </p>
+        </article>
+
+        <article class="availability-panel" data-reveal="up" style="--reveal-delay: 0.22s;">
+          <span class="availability-panel-kicker">Arrival standards</span>
+          <h3>Everything owners should prepare before drop-off day.</h3>
+          <div class="availability-note-stack">
+            <article class="availability-note-card">
+              <strong>Drop-off</strong>
+              <p>08:00 AM to 10:00 AM or 05:00 PM to 07:00 PM in a pre-confirmed handover slot.</p>
+            </article>
+            <article class="availability-note-card">
+              <strong>Pick-up</strong>
+              <p>Morning collection is preferred so pets settle back into home routines smoothly.</p>
+            </article>
+            <article class="availability-note-card">
+              <strong>Bring along</strong>
+              <p>Pack usual food, favourite bedding, medication, and any handling notes that matter.</p>
+            </article>
+            <article class="availability-note-card">
+              <strong>Changes</strong>
+              <p>Please update us 48 hours early so scheduling and waitlist requests stay fair&organised.</p>
+            </article>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="availability-booking-section section-shell" id="booking-request">
+      <div class="availability-booking-shell">
+        <div class="availability-booking-copy" data-reveal="up">
+          <span class="section-eyebrow">Check Dates and Book</span>
+          <h2>Submit your availability request.</h2>
+          <p>
+            The form is arranged to keep every field aligned and easy to scan. Once submitted, we review your dates,
+            pet type, and routine notes, then reply with the clearest available option.
+          </p>
+
+          <div class="availability-booking-points">
+            <article class="availability-booking-point">
+              <strong>Fast confirmation</strong>
+              <p>Most requests receive a reply within one working day.</p>
+            </article>
+            <article class="availability-booking-point">
+              <strong>Clear recommendations</strong>
+              <p>We suggest the suite that best fits your pet instead of sending a generic response.</p>
+            </article>
+            <article class="availability-booking-point">
+              <strong>Waitlist support</strong>
+              <p>If dates are full, we explain the next best option right away.</p>
+            </article>
+          </div>
+
+          <a class="availability-booking-contact" href="contact.html">Need help before submitting? Speak with our care team.</a>
+        </div>
+
+        <form class="availability-booking-form" data-reveal="up" style="--reveal-delay: 0.06s;">
+          <div class="availability-booking-grid">
+            <label class="availability-booking-field">
+              <span>Your name</span>
+              <input type="text" name="owner_name" placeholder="Owner name">
+            </label>
+
+            <label class="availability-booking-field">
+              <span>Email address</span>
+              <input type="email" name="email" placeholder="Email address">
+            </label>
+
+            <label class="availability-booking-field">
+              <span>Phone number</span>
+              <input type="tel" name="phone" placeholder="Phone number">
+            </label>
+
+            <label class="availability-booking-field">
+              <span>Pet type</span>
+              <select name="pet_type">
+                <option value="" selected disabled>Select pet type</option>
+                <option>Hamster</option>
+                <option>Guinea Pig</option>
+                <option>Rabbit</option>
+                <option>Other Small Animal</option>
+              </select>
+            </label>
+
+            <label class="availability-booking-field">
+              <span>Suite preference</span>
+              <select name="suite_preference">
+                <option value="" selected disabled>Select a stay style</option>
+                <option>Willow Nest</option>
+                <option>Meadow Suite</option>
+                <option>Oak Care Stay</option>
+                <option>Need help choosing</option>
+              </select>
+            </label>
+
+            <label class="availability-booking-field">
+              <span>City</span>
+              <input type="text" name="city" placeholder="Your city">
+            </label>
+
+            <label class="availability-booking-field">
+              <span>Check-in date</span>
+              <input type="date" name="check_in">
+            </label>
+
+            <label class="availability-booking-field">
+              <span>Check-out date</span>
+              <input type="date" name="check_out">
+            </label>
+
+            <label class="availability-booking-field availability-booking-field--wide">
+              <span>Pet details and care notes</span>
+              <textarea name="care_notes" rows="5" placeholder="Food routine, sleep habits, cleaning preferences, medication, handling notes, or anything helpful for preparing the stay"></textarea>
+            </label>
+          </div>
+
+          <div class="availability-booking-foot">
+            <label class="availability-booking-consent">
+              <input type="checkbox" name="consent">
+              <span>I agree that my details can be used to contact me about availability, boarding dates, and waitlist updates.</span>
+            </label>
+
+            <div class="availability-booking-actions">
+              <button class="button primary" type="button">Check Dates &amp; Book</button>
+              <a class="button secondary" href="contact.html">Join Waitlist</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="faq-support-section section-shell" id="prepare">
+      <div class="section-heading faq-support-heading" data-reveal="up">
+        <span class="section-eyebrow">Helpful Answers</span>
+        <h2> Frequently Asked Questions</h2>
+        <p>
+          These are the questions owners ask most often when arranging dates for a hamster,
+          rabbit, guinea pig, or another small companion.
+        </p>
+      </div>
+
+      <div class="faq-support-list" data-reveal="up" style="--reveal-delay: 0.06s;">
+        <details class="faq-support-item" open>
+          <summary>How do I check whether my dates are still open?</summary>
+          <div class="faq-support-answer">
+            Review the live schedule above, then submit your preferred date range. We confirm the best open option and suggest alternatives if your first choice is nearly full.
+          </div>
+        </details>
+
+        <details class="faq-support-item">
+          <summary>What should I bring at drop-off?</summary>
+          <div class="faq-support-answer">
+            Bring your pet's usual food, familiar bedding, medication if needed, and any care instructions that help us keep routines steady and low-stress.
+          </div>
+        </details>
+
+        <details class="faq-support-item">
+          <summary>What happens if my requested dates are already full?</summary>
+          <div class="faq-support-answer">
+            We can place your request on the waitlist, guide you toward the next calm opening, and contact you in request order if a space becomes available.
+          </div>
+        </details>
+
+        <details class="faq-support-item">
+          <summary>Will I receive updates while my pet is staying?</summary>
+          <div class="faq-support-answer">
+            Yes. We send gentle, clear updates so you know how your pet is settling, eating, resting, and adjusting throughout the stay.
+          </div>
+        </details>
+      </div>
+
+      <div class="faq-support-cta" data-reveal="up" style="--reveal-delay: 0.12s;">
+        <div>
+          <span class="faq-support-kicker">Need a quicker answer?</span>
+          <h3>Talk to our care team before you lock in dates.</h3>
+          <p>We can help you choose the right suite, explain the waitlist, and guide you toward the smoothest option for your pet.</p>
+        </div>
+        <a class="button primary" href="contact.html">Contact Us</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="footer-shell">
+      <div class="footer-branding" data-reveal="up">
+        <a class="footer-brand-head" href="index.html" aria-label="Go to home">
+          <img src="image/logo.png" alt="Cozy Critters Stay logo">
+         
+        </a>
+        <p>
+          A warmer approach to tiny-pet boarding, built around calm routines, careful handling,
+          safe setups, and clearer communication for pet parents.
+        </p>
+        <div class="footer-badges" aria-label="Service highlights">
+          <span>Quiet spaces</span>
+          <span>Gentle routines</span>
+          <span>Photo updates</span>
+        </div>
+      </div>
+
+      <div class="footer-links footer-quick" data-reveal="up" style="--reveal-delay: 0.08s;">
+        <h3>Quick Links</h3>
+        <a href="index.html">HomePage 1</a>
+        <a href="home-2.html">HomePage 2</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="avalabilty.html" class="active" aria-current="page">Availability</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-links footer-contact" data-reveal="up" style="--reveal-delay: 0.16s;">
+        <h3>Contact Us</h3>
+        <p>Reach out for boarding dates, care questions, or custom stay requests for your tiny companion.</p>
+        <a href="tel:+919876543210">+91 98765 43210</a>
+        <a href="mailto:hello@cozycrittersstay.com">hello@cozycrittersstay.com</a>
+        <div class="footer-socials" aria-label="Social media links">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect>
+              <circle cx="12" cy="12" r="4"></circle>
+              <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"></circle>
+            </svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path fill="currentColor" stroke="none" d="M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v4h4v-4h3.2l.8-4H13V9c0-.7.3-1 1-1Z"></path>
+            </svg>
+          </a>
+          <a href="#" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M12 4.2a7.8 7.8 0 0 0-6.8 11.7L4 20l4.3-1.1A7.8 7.8 0 1 0 12 4.2Z"></path>
+              <path fill="currentColor" stroke="none" d="M9.4 8.7c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.4-.2.3-.8.8-.8 1.9 0 1.1.8 2.2.9 2.3.1.1 1.6 2.6 4 3.5 2 .8 2.4.6 2.9.5.4-.1 1.3-.6 1.5-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.7-.4-.4-.2-1.3-.6-1.5-.6-.2-.1-.4-.1-.6.2-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-.3-.2-1.2-.4-2.2-1.4-.8-.7-1.3-1.6-1.5-1.9-.2-.3 0-.4.1-.6.1-.1.2-.3.4-.4.1-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.1-.6-1.4-.8-1.9Z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Cozy Critters Stay. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/header-modes.js"></script>
+</body>
+</html>
