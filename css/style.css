@@ -15771,7 +15771,7 @@ body:not([class]) .hero-slide-copy .hero-actions {
 ) {
   font-family: "Fredoka", "Trebuchet MS", sans-serif;
   font-size: 0.95rem !important;
-  font-weight: 700 !important;
+  font-weight: 500 !important;
   letter-spacing: 0.14em;
 }
 
@@ -15792,7 +15792,7 @@ body:not([class]) .hero-slide-copy .hero-actions {
   margin-top: 20px;
   font-family: "Fredoka", "Trebuchet MS", sans-serif;
   font-size: 1.02rem !important;
-  font-weight: 700 !important;
+  font-weight: 500 !important;
   line-height: 1.35;
   color: rgba(255, 248, 239, 0.96) !important;
   text-shadow: 0 6px 18px rgba(30, 18, 10, 0.22) !important;
@@ -15810,7 +15810,7 @@ body:not([class]) .hero-slide-copy .hero-actions {
 ) :is(a, span, strong) {
   font-family: inherit;
   font-size: inherit;
-  font-weight: 700 !important;
+  font-weight: 500 !important;
   line-height: inherit;
   text-shadow: inherit;
 }
@@ -15892,7 +15892,7 @@ body:not([class]) .hero-slide-copy .hero-actions {
   margin-top: 20px !important;
   font-family: "Fredoka", "Trebuchet MS", sans-serif !important;
   font-size: 1.02rem !important;
-  font-weight: 700 !important;
+  font-weight: 500 !important;
   line-height: 1.35 !important;
   color: #fff8ef !important;
   text-shadow: 0 6px 18px rgba(30, 18, 10, 0.22) !important;
@@ -15905,7 +15905,7 @@ body:not([class]) .hero-slide-copy .hero-actions {
 ) :is(a, strong, span) {
   font-family: inherit !important;
   font-size: inherit !important;
-  font-weight: 700 !important;
+  font-weight: 500 !important;
   line-height: inherit !important;
   text-shadow: inherit !important;
 }
