@@ -1052,6 +1052,59 @@ main {
   }
 }
 
+@media (min-width: 861px) and (max-width: 1080px) {
+  .hero-shell {
+    padding-inline: clamp(14px, 2.6vw, 24px);
+  }
+
+  .navbar {
+    gap: 12px;
+    padding: 12px 14px 12px 16px;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav-main {
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 4px;
+    padding: 4px;
+  }
+
+  .nav-main > a,
+  .nav-dropdown > summary {
+    padding: 10px 12px;
+    font-size: 0.82rem;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+  }
+
+  .nav-tools {
+    gap: 8px;
+    padding: 4px;
+  }
+
+  .nav-preferences {
+    gap: 6px;
+  }
+
+  .nav-mode-button {
+    width: 44px;
+    height: 44px;
+    border-radius: 16px;
+  }
+
+  .nav-pill {
+    min-height: 44px;
+    padding-inline: 14px;
+    font-size: 0.86rem;
+    white-space: nowrap;
+  }
+}
+
 @media (max-width: 860px) {
   .navbar {
     align-items: center;
@@ -1078,6 +1131,8 @@ main {
     left: 0;
     right: 0;
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: stretch;
     gap: 8px;
     padding: 18px;
     background: var(--mobile-menu-bg);
@@ -1092,6 +1147,8 @@ main {
 
   .nav-main {
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: stretch;
     gap: 8px;
     padding: 0;
     border: 0;
@@ -1101,6 +1158,8 @@ main {
 
   .nav-tools {
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: stretch;
     gap: 12px;
     margin-left: 0;
     margin-right: 0;
@@ -1112,31 +1171,56 @@ main {
 
   .nav-main > a,
   .nav-dropdown > summary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
+    min-width: 0;
+    min-height: 48px;
+    box-sizing: border-box;
     text-align: center;
     background: var(--dropdown-link-bg);
   }
 
   .nav-dropdown {
     width: 100%;
+    min-width: 0;
   }
 
   .nav-dropdown > summary {
     justify-content: center;
   }
 
+  .nav-main > a.active,
+  .nav-main > a[aria-current="page"],
+  .nav-dropdown--active > summary,
+  .nav-dropdown[open] > summary {
+    background: linear-gradient(135deg, var(--apricot), #ff9d3f);
+    color: var(--white);
+  }
+
   .dropdown-menu {
     position: static;
+    width: 100%;
     min-width: 0;
     margin-top: 8px;
     padding: 10px;
+    box-sizing: border-box;
     border-radius: 18px;
     box-shadow: none;
     background: var(--mobile-dropdown-bg);
   }
 
   .dropdown-menu a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 44px;
+    box-sizing: border-box;
     text-align: center;
+    white-space: normal;
+    line-height: 1.35;
   }
 
   .nav-preferences {
@@ -1355,7 +1439,10 @@ main {
 .section-eyebrow {
   display: inline-flex;
   align-items: center;
+  justify-self: start;
   gap: 10px;
+  width: fit-content;
+  max-width: 100%;
   padding: 9px 16px;
   border-radius: 999px;
   background: rgba(127, 157, 52, 0.14);
@@ -1388,7 +1475,7 @@ main {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 18px;
   margin-top: clamp(20px, 3vw, 32px);
 }
@@ -2069,6 +2156,9 @@ main {
 .updates-card {
   position: relative;
   overflow: hidden;
+  margin: 0;
+  width: 100%;
+  justify-self: stretch;
   aspect-ratio: 4 / 3;
   min-height: 220px;
   border-radius: 24px;
@@ -2082,6 +2172,21 @@ main {
   grid-column: span 2;
   aspect-ratio: 16 / 10;
   min-height: 290px;
+}
+
+@media (max-width: 1024px) {
+  .home-two-page .updates-gallery {
+    width: 100%;
+    justify-self: stretch;
+  }
+
+  .home-two-page .updates-card {
+    min-width: 0;
+  }
+
+  .home-two-page .updates-card img {
+    object-position: center center;
+  }
 }
 
 .updates-layout--single .updates-list {
@@ -4102,6 +4207,10 @@ main {
   margin-top: clamp(34px, 4vw, 44px);
 }
 
+.home-two-page .booking-request-section {
+  margin-bottom: clamp(30px, 4vw, 46px);
+}
+
 .home-two-page .home-two-page-banner {
   position: relative;
   overflow: hidden;
@@ -4464,7 +4573,7 @@ main {
 }
 
 .home-two-page .faq-support-item[open] summary::after {
-  content: "−";
+  content: "âˆ’";
 }
 
 .home-two-page .faq-support-answer {
@@ -12622,15 +12731,15 @@ body.auth-page .container{
   width:50%;
   background:url('../image/beautiful-guinea-pig-pet-portrait (1).jpg') no-repeat center center/cover;
   position:relative;
+  display:flex;
+  overflow:hidden;
 }
 
 .overlay{
-  position:absolute;
-  top:0;
-  left:0;
+  position:relative;
   width:100%;
-  height:100%;
-  overflow:hidden;
+  min-height:100%;
+  overflow:visible;
   background:
     linear-gradient(155deg, rgba(29, 20, 14, 0.82), rgba(76, 47, 29, 0.58)),
     radial-gradient(circle at top right, rgba(239, 123, 35, 0.28), transparent 35%);
@@ -12638,7 +12747,8 @@ body.auth-page .container{
   display:flex;
   flex-direction:column;
   justify-content:center;
-  padding:60px;
+  gap:18px;
+  padding:clamp(32px, 6vw, 60px);
   isolation:isolate;
 }
 
@@ -12666,25 +12776,39 @@ body.auth-page.auth-page--register .overlay{
 }
 
 .overlay h1{
-  font-size:40px;
-  margin-bottom:15px;
+  max-width:10ch;
+  font-size:clamp(34px, 4vw, 40px);
+  line-height:1.05;
+  margin:0;
 }
 
 .overlay p{
+  max-width:32ch;
   font-size:16px;
-  margin-bottom:30px;
+  line-height:1.6;
+  margin:0;
+  color:rgba(255, 244, 231, 0.92);
 }
 
 .features{
   display:flex;
-  gap:20px;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:6px;
 }
 
 .features div{
-  background:rgba(255,255,255,0.1);
-  padding:10px 15px;
-  border-radius:20px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:0;
+  flex:1 1 160px;
+  background:rgba(255,255,255,0.12);
+  padding:12px 16px;
+  border-radius:18px;
   font-size:14px;
+  line-height:1.4;
+  backdrop-filter:blur(6px);
 }
 
 /* RIGHT SIDE */
@@ -12935,14 +13059,51 @@ button{
 @media(max-width:900px){
   body.auth-page .container{
     flex-direction:column;
+    gap:10px;
+    padding:10px 0 18px;
   }
   .left, .right{
-    width:100%;
+    width:calc(100% - 20px);
+    margin-inline:10px;
     min-height:50vh;
     height:auto;
   }
+  .left{
+    min-height:clamp(360px, 58vh, 460px);
+  }
   .overlay{
-    padding:36px 24px;
+    justify-content:flex-start;
+    padding:40px 24px 44px;
+  }
+  .features{
+    flex-direction:column;
+  }
+  .features div{
+    flex:1 1 auto;
+  }
+  .right{
+    padding-top:40px;
+    padding-bottom:40px;
+  }
+}
+
+@media(max-width:560px){
+  .left{
+    min-height:380px;
+  }
+  .overlay{
+    gap:14px;
+    padding:36px 20px 40px;
+  }
+  .overlay h1{
+    font-size:clamp(30px, 9vw, 40px);
+  }
+  .features{
+    gap:10px;
+  }
+  .right{
+    padding-top:32px;
+    padding-bottom:32px;
   }
 }
 
@@ -14443,6 +14604,18 @@ body.feeding-cleaning-page {
 }
 
 @media (max-width: 820px) {
+  .daily-care-rhythm,
+  .daily-care-cycle,
+  .daily-care-updates__shell {
+    grid-template-columns: 1fr !important;
+  }
+
+  .daily-care-cycle__snapshot,
+  .daily-care-updates__visual {
+    width: 100%;
+    max-width: none;
+  }
+
   .daily-care-cycle__timeline,
   .daily-care-comfort__gallery,
   .feeding-cleaning-foundation__points,
@@ -14472,6 +14645,13 @@ body.feeding-cleaning-page {
   .feeding-cleaning-page-banner__crumbs {
     gap: 10px;
     font-size: 0.9rem;
+  }
+
+  .daily-care-cycle__snapshot img,
+  .daily-care-updates__visual img {
+    height: auto;
+    min-height: 220px;
+    aspect-ratio: 4 / 3;
   }
 }
 
@@ -15006,8 +15186,8 @@ iframe {
   }
 
   .nav-links {
-    max-height: calc(100vh - 110px);
-    overflow-y: auto;
+    max-height: none;
+    overflow: visible;
     z-index: 25;
   }
 
@@ -15932,5 +16112,185 @@ body.suites-page .suites-page-banner__crumbs span {
     body.suites-page .suites-page-banner__crumbs
   ) {
     font-size: 0.9rem !important;
+  }
+}
+
+/* Restore centered intros that were flattened by the late global alignment override. */
+:root:not([dir="rtl"]) body:not([class]) .availability-card .availability-copy,
+:root:not([dir="rtl"]) .home-two-page .routine-section .section-heading,
+:root:not([dir="rtl"]) body.suites-page .suite-page-heading--split > :only-child {
+  margin-inline: auto !important;
+  text-align: center !important;
+}
+
+:root:not([dir="rtl"]) body.suites-page .suite-page-heading--split > :only-child {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 861px) {
+  :root:not([dir="rtl"]) body:not([class]) .suites-section .suite-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    grid-auto-rows: 1fr;
+    gap: 14px;
+    align-items: stretch;
+  }
+
+  :root:not([dir="rtl"]) body:not([class]) .suites-section .suite-card {
+    height: 100%;
+    padding: 12px;
+    border-radius: 22px;
+  }
+
+  :root:not([dir="rtl"]) body:not([class]) .suites-section .suite-card--featured {
+    transform: none;
+  }
+
+  :root:not([dir="rtl"]) body:not([class]) .suites-section .suite-media {
+    border-radius: 16px;
+    aspect-ratio: 1 / 0.74;
+  }
+
+  :root:not([dir="rtl"]) body:not([class]) .suites-section .suite-body {
+    padding: 12px 2px 2px;
+  }
+
+  :root:not([dir="rtl"]) body:not([class]) .suites-section .suite-badge {
+    font-size: 0.68rem;
+    letter-spacing: 0.05em;
+  }
+
+  :root:not([dir="rtl"]) body:not([class]) .suites-section .suite-summary {
+    min-height: 0;
+    margin-top: 8px;
+    font-size: 0.84rem;
+    line-height: 1.5;
+  }
+
+  :root:not([dir="rtl"]) body:not([class]) .suites-section .feature-dots {
+    gap: 7px;
+    margin-top: 12px;
+  }
+
+  :root:not([dir="rtl"]) body:not([class]) .suites-section .feature-dots li {
+    padding-left: 14px;
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  :root:not([dir="rtl"]) body:not([class]) .suites-section .feature-dots li::before {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+@media (min-width: 1025px) {
+  :root:not([dir="rtl"]) body:not([class]) .testimonial-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    grid-auto-rows: 1fr;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  :root:not([dir="rtl"]) body:not([class]) .testimonial-card {
+    height: 100%;
+    padding: 18px;
+    border-radius: 22px;
+  }
+
+  :root:not([dir="rtl"]) body:not([class]) .testimonial-stars {
+    font-size: 0.88rem;
+    letter-spacing: 0.1em;
+  }
+
+  :root:not([dir="rtl"]) body:not([class]) .testimonial-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  :root:not([dir="rtl"]) body:not([class]) .testimonial-card strong {
+    margin-top: 14px;
+    font-size: 0.94rem;
+  }
+
+  :root:not([dir="rtl"]) body:not([class]) .availability-checklist {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 14px;
+  }
+
+  :root:not([dir="rtl"]) body:not([class]) .availability-checklist div {
+    height: 100%;
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  :root:not([dir="rtl"]) body:not([class]) .availability-checklist strong {
+    font-size: 0.96rem;
+  }
+
+  :root:not([dir="rtl"]) body:not([class]) .availability-checklist span {
+    margin-top: 7px;
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 860px) {
+  .hero-shell {
+    overflow: visible;
+  }
+
+  .navbar {
+    z-index: 60;
+  }
+
+  .nav-links {
+    max-height: min(calc(100dvh - 112px), 78vh);
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    align-content: start;
+  }
+
+  .nav-main,
+  .nav-tools {
+    align-content: start;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 641px) {
+  body.about-page .about-pet-canvas__stage {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-areas:
+      "story story"
+      "rabbit guinea"
+      "tiny sleepy"
+      "hamsters hamsters" !important;
+    align-items: start;
+  }
+
+  body.about-page .about-pet-canvas__story,
+  body.about-page .about-pet-float,
+  body.about-page .about-pet-strip {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  body.about-page .about-pet-canvas__stage {
+    grid-template-columns: 1fr !important;
+    grid-template-areas:
+      "story"
+      "rabbit"
+      "guinea"
+      "tiny"
+      "sleepy"
+      "hamsters" !important;
+  }
+
+  body.about-page .about-pet-canvas__story {
+    width: 100%;
+    min-width: 0;
   }
 }
