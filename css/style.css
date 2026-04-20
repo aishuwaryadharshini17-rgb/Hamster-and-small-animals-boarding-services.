@@ -11891,7 +11891,7 @@ body.suites-page {
 
 .suite-collection-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 22px;
   align-items: stretch;
 }
@@ -11935,7 +11935,9 @@ body.suites-page {
   gap: 16px;
   height: 100%;
   align-content: start;
+  justify-items: start;
   padding: 24px 22px 24px;
+  text-align: left;
 }
 
 .suite-spotlight-card__label {
@@ -11960,13 +11962,14 @@ body.suites-page {
   font-family: "DM Serif Display", Georgia, serif;
   font-size: 1.95rem;
   font-weight: 400;
-  line-height: 0.98;
+  line-height: 1.08;
 }
 
 .suite-spotlight-card__body p,
 .suite-spotlight-card__foot span {
   margin: 0;
   color: var(--text-body);
+  line-height: 1.7;
 }
 
 .suite-spotlight-card__list,
@@ -11983,6 +11986,7 @@ body.suites-page {
   position: relative;
   padding-left: 30px;
   color: var(--text-body);
+  line-height: 1.6;
 }
 
 .suite-spotlight-card__list li::before,
@@ -12016,6 +12020,20 @@ body.suites-page {
   gap: 6px;
   padding-top: 14px;
   border-top: 1px solid rgba(154, 84, 39, 0.12);
+}
+
+@media (min-width: 1181px) {
+  .suite-spotlight-card__body h3 {
+    min-height: 2.2em;
+  }
+
+  .suite-spotlight-card__body p {
+    min-height: 6.8em;
+  }
+
+  .suite-spotlight-card__list li {
+    min-height: 2.8em;
+  }
 }
 
 .suite-spotlight-card__foot strong,
@@ -12133,8 +12151,10 @@ body.suites-page {
 
 .suite-match-lab__grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
+  align-items: stretch;
+  grid-auto-rows: 1fr;
 }
 
 .suite-match-card {
@@ -12159,6 +12179,10 @@ body.suites-page {
 
 .suite-match-card--calm {
   --suite-match-accent: #4a6526;
+}
+
+.suite-match-card--steady {
+  --suite-match-accent: #8d6a46;
 }
 
 .suite-match-card__index {
@@ -12533,9 +12557,12 @@ body.suites-page {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .suite-spotlight-card,
-  .suite-spotlight-card--featured {
+  .suite-spotlight-card {
     grid-column: auto;
+  }
+
+  .suite-spotlight-card--featured {
+    grid-column: 1 / -1;
   }
 
   .suite-match-lab__grid,
@@ -14074,14 +14101,20 @@ body.feeding-cleaning-page {
 
 .daily-care-rhythm__facts {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  grid-auto-rows: 1fr;
   gap: 14px;
 }
 
 .daily-care-rhythm__facts article,
 .daily-care-comfort__cards article,
 .feeding-cleaning-foundation__points article,
-.feeding-cleaning-pack__check {
+.feeding-cleaning-pack__check,
+.availability-booking-point {
   display: grid;
+  align-content: start;
+  height: 100%;
   gap: 8px;
   padding: 18px 18px 16px;
   border-radius: 24px;
@@ -14270,8 +14303,12 @@ body.feeding-cleaning-page {
 }
 
 .daily-care-comfort__cards,
-.feeding-cleaning-pack__checks {
+.feeding-cleaning-pack__checks,
+.availability-booking-points {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  grid-auto-rows: 1fr;
   gap: 14px;
 }
 
@@ -14346,7 +14383,9 @@ body.feeding-cleaning-page {
 
 .feeding-cleaning-foundation__points {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  grid-auto-rows: 1fr;
   gap: 14px;
 }
 
