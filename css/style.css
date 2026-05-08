@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   color-scheme: light;
   --cream: #fbf4de;
   --sunlit: #ffe7a6;
@@ -526,6 +526,34 @@ main {
   color: #ffffff;
   fill: #ffffff;
   stroke: none;
+}
+
+.nav-mode-button[data-mode-toggle="dir"] {
+  width: 64px;
+  padding: 0 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.nav-mode-button[data-mode-toggle="dir"] .nav-mode-icon {
+  display: none;
+}
+
+.nav-mode-button[data-mode-toggle="dir"] .nav-mode-value {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: nowrap;
+  border: 0;
+  font-size: 0.82rem;
+  line-height: 1;
+  color: currentColor;
 }
 
 .sr-only {
@@ -4589,7 +4617,7 @@ main {
 }
 
 .home-two-page .faq-support-item[open] summary::after {
-  content: "âˆ’";
+  content: "Ã¢Ë†â€™";
 }
 
 .home-two-page .faq-support-answer {
@@ -8240,12 +8268,12 @@ body.contact-page {
   position: relative;
   overflow: hidden;
   display: grid;
-  align-items: center;
-  justify-items: start;
+  align-items: start;
+  justify-items: center;
   min-height: clamp(300px, 36vw, 420px);
   margin: 28px calc(clamp(16px, 4vw, 40px) * -1) 0;
-  padding: clamp(56px, 8vw, 96px) clamp(18px, 4vw, 40px);
-  text-align: start;
+  padding: clamp(40px, 6vw, 70px) clamp(18px, 4vw, 40px);
+  text-align: center;
   background: url("../image/c5.jpg") center 36% / cover no-repeat;
   box-shadow: 0 24px 42px rgba(76, 47, 29, 0.16);
 }
@@ -8292,7 +8320,7 @@ body.contact-page {
 .contact-page-banner__crumbs {
   display: inline-flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 14px;
   margin-top: 20px;
   color: rgba(255, 248, 239, 0.94);
@@ -16115,6 +16143,198 @@ body:not([class]) .hero-slide-copy .hero-actions {
   }
 }
 
+/* ===== FINAL RESPONSIVE HEADER + INTERNAL BANNER STABILITY ===== */
+@media (min-width: 861px) and (max-width: 1100px) {
+  .navbar {
+    gap: 10px;
+    padding: 12px 14px 12px 16px;
+  }
+
+  .brand-mark {
+    width: 124px;
+  }
+
+  .nav-links {
+    gap: 10px;
+    min-width: 0;
+  }
+
+  .nav-main {
+    flex: 1 1 0%;
+    flex-wrap: nowrap;
+    gap: 6px;
+    padding: 4px;
+  }
+
+  .nav-main > a,
+  .nav-dropdown > summary {
+    padding: 10px 11px;
+    font-size: 0.81rem;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+  }
+
+  .nav-tools {
+    gap: 8px;
+    padding: 4px;
+  }
+
+  .nav-mode-button {
+    width: 42px;
+    height: 42px;
+    border-radius: 15px;
+  }
+
+  .nav-pill {
+    min-height: 42px;
+    padding-inline: 12px;
+    font-size: 0.84rem;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 860px) {
+  .navbar {
+    gap: 14px;
+    align-items: center;
+  }
+
+  .brand-mark {
+    width: clamp(104px, 24vw, 122px);
+  }
+
+  .nav-links {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .nav-main,
+  .nav-tools,
+  .nav-cta {
+    min-width: 0;
+  }
+
+  .nav-main > a,
+  .nav-dropdown > summary,
+  .dropdown-menu a,
+  .nav-pill {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-shell {
+    padding-inline: 14px;
+    padding-bottom: 36px;
+  }
+
+  .navbar {
+    margin-bottom: 26px;
+  }
+
+  :is(
+    .about-page-banner,
+    .contact-page-banner,
+    .gallery-page-banner,
+    .availability-page-banner,
+    .suites-page-banner,
+    .boarding-page-banner,
+    .daily-care-page-banner,
+    .feeding-cleaning-page-banner,
+    .home-two-page .home-two-page-banner
+  ) {
+    margin-top: 22px !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+    min-height: 280px !important;
+  }
+
+  :is(
+    .about-page-banner__content,
+    .contact-page-banner__content,
+    .gallery-page-banner__content,
+    .availability-page-banner__content,
+    .suites-page-banner__content,
+    .boarding-page-banner__content,
+    .daily-care-page-banner__content,
+    .feeding-cleaning-page-banner__content,
+    .home-two-page .home-two-page-banner__content
+  ) {
+    width: min(100%, 680px) !important;
+    max-width: min(100%, 680px) !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-shell {
+    padding-inline: 12px;
+    padding-bottom: 30px;
+  }
+
+  .navbar {
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 26px;
+  }
+
+  .brand-mark {
+    width: 96px;
+  }
+
+  .menu-button {
+    width: 48px;
+    height: 48px;
+  }
+
+  :is(
+    .about-page-banner,
+    .contact-page-banner,
+    .gallery-page-banner,
+    .availability-page-banner,
+    .suites-page-banner,
+    .boarding-page-banner,
+    .daily-care-page-banner,
+    .feeding-cleaning-page-banner,
+    .home-two-page .home-two-page-banner
+  ) {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    min-height: 252px !important;
+  }
+
+  :is(
+    .about-page-banner__content h1,
+    .contact-page-banner__content h1,
+    .gallery-page-banner__content h1,
+    .availability-page-banner__content h1,
+    .suites-page-banner__content h1,
+    .boarding-page-banner__content h1,
+    .daily-care-page-banner__content h1,
+    .feeding-cleaning-page-banner__content h1,
+    .home-two-page .home-two-page-banner__content h1
+  ) {
+    font-size: clamp(2.25rem, 14vw, 3rem) !important;
+  }
+
+  :is(
+    .about-page-banner__kicker,
+    .contact-page-banner__kicker,
+    .gallery-page-banner__kicker,
+    .availability-page-banner__kicker,
+    .suites-page-banner__kicker,
+    .boarding-page-banner__kicker,
+    .daily-care-page-banner__kicker,
+    .feeding-cleaning-page-banner__kicker,
+    .home-two-page .home-two-page-banner__kicker
+  ) {
+    width: min(100%, 100%);
+    min-height: 0;
+    padding: 10px 14px;
+    line-height: 1.35;
+    white-space: normal;
+  }
+}
 /* Direct breadcrumb lock for pages that were still rendering lighter */
 :is(
   body.availability-page .availability-page-banner__crumbs,
@@ -16382,5 +16602,432 @@ body.suites-page .suites-page-banner__crumbs span {
 
 :root body.about-page .about-page-banner__kicker,
 :root body.about-page .about-page-banner__crumbs {
+  justify-content: center !important;
+}
+
+:root body.contact-page .contact-page-banner {
+  display: grid !important;
+  justify-content: center !important;
+  justify-items: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+:root body.contact-page .contact-page-banner__content {
+  display: grid !important;
+  width: min(100%, 760px) !important;
+  max-width: min(100%, 760px) !important;
+  justify-self: center !important;
+  justify-items: center !important;
+  align-items: center !important;
+  margin: 0 auto !important;
+  margin-inline: auto !important;
+  text-align: center !important;
+}
+
+:root body.contact-page .contact-page-banner__content h1,
+:root body.contact-page .contact-page-banner__kicker,
+:root body.contact-page .contact-page-banner__crumbs {
+  margin-inline: auto !important;
+  text-align: center !important;
+}
+
+:root body.contact-page .contact-page-banner__kicker,
+:root body.contact-page .contact-page-banner__crumbs {
+  justify-content: center !important;
+}
+
+
+/* Final banner center lock: match internal banners to About page */
+:root:not([dir="rtl"]) :is(
+  body.about-page .about-page-banner,
+  body.contact-page .contact-page-banner,
+  body.gallery-page .gallery-page-banner,
+  body.availability-page .availability-page-banner,
+  body.suites-page .suites-page-banner,
+  body.boarding-page .boarding-page-banner,
+  body.daily-care-page .daily-care-page-banner,
+  body.feeding-cleaning-page .feeding-cleaning-page-banner
+) {
+  justify-content: center !important;
+  justify-items: center !important;
+  text-align: center !important;
+}
+
+:root:not([dir="rtl"]) :is(
+  body.about-page .about-page-banner__content,
+  body.contact-page .contact-page-banner__content,
+  body.gallery-page .gallery-page-banner__content,
+  body.availability-page .availability-page-banner__content,
+  body.suites-page .suites-page-banner__content,
+  body.boarding-page .boarding-page-banner__content,
+  body.daily-care-page .daily-care-page-banner__content,
+  body.feeding-cleaning-page .feeding-cleaning-page-banner__content
+) {
+  margin: 0 auto !important;
+  margin-inline: auto !important;
+  text-align: center !important;
+  justify-items: center !important;
+  align-items: center !important;
+}
+
+:root:not([dir="rtl"]) :is(
+  body.about-page .about-page-banner__content h1,
+  body.about-page .about-page-banner__content p,
+  body.contact-page .contact-page-banner__content h1,
+  body.contact-page .contact-page-banner__content p,
+  body.gallery-page .gallery-page-banner__content h1,
+  body.gallery-page .gallery-page-banner__content p,
+  body.availability-page .availability-page-banner__content h1,
+  body.availability-page .availability-page-banner__content p,
+  body.suites-page .suites-page-banner__content h1,
+  body.suites-page .suites-page-banner__content p,
+  body.boarding-page .boarding-page-banner__content h1,
+  body.boarding-page .boarding-page-banner__content p,
+  body.daily-care-page .daily-care-page-banner__content h1,
+  body.daily-care-page .daily-care-page-banner__content p,
+  body.feeding-cleaning-page .feeding-cleaning-page-banner__content h1,
+  body.feeding-cleaning-page .feeding-cleaning-page-banner__content p,
+  .about-page-banner__kicker,
+  .contact-page-banner__kicker,
+  .gallery-page-banner__kicker,
+  .availability-page-banner__kicker,
+  .suites-page-banner__kicker,
+  .boarding-page-banner__kicker,
+  .daily-care-page-banner__kicker,
+  .feeding-cleaning-page-banner__kicker,
+  .about-page-banner__crumbs,
+  .contact-page-banner__crumbs,
+  .gallery-page-banner__crumbs,
+  .availability-page-banner__crumbs,
+  .suites-page-banner__crumbs,
+  .boarding-page-banner__crumbs,
+  .daily-care-page-banner__crumbs,
+  .feeding-cleaning-page-banner__crumbs
+) {
+  margin-inline: auto !important;
+  text-align: center !important;
+}
+
+:root:not([dir="rtl"]) :is(
+  .about-page-banner__kicker,
+  .contact-page-banner__kicker,
+  .gallery-page-banner__kicker,
+  .availability-page-banner__kicker,
+  .suites-page-banner__kicker,
+  .boarding-page-banner__kicker,
+  .daily-care-page-banner__kicker,
+  .feeding-cleaning-page-banner__kicker,
+  .about-page-banner__crumbs,
+  .contact-page-banner__crumbs,
+  .gallery-page-banner__crumbs,
+  .availability-page-banner__crumbs,
+  .suites-page-banner__crumbs,
+  .boarding-page-banner__crumbs,
+  .daily-care-page-banner__crumbs,
+  .feeding-cleaning-page-banner__crumbs
+) {
+  justify-content: center !important;
+}
+
+
+
+/* ===== FINAL MOBILE + TABLET RESPONSIVE LOCK ===== */
+.brand-copy:empty {
+  display: none !important;
+}
+
+@media (max-width: 1100px) {
+  .navbar,
+  .section-shell,
+  .home-two-page .section-shell,
+  .footer-shell,
+  .auth-stage,
+  main,
+  .home-main {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .navbar {
+    width: min(100%, 1220px);
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-shell {
+    overflow-x: clip;
+  }
+
+  .section-shell,
+  .home-two-page .section-shell,
+  .footer-shell,
+  .auth-stage {
+    width: min(100%, calc(100% - 28px));
+    margin-inline: auto;
+  }
+
+  .nav-links,
+  .nav-main,
+  .nav-tools,
+  .nav-cta,
+  .dropdown-menu,
+  .dropdown-menu a {
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  :root:not([dir="rtl"]) :is(
+    body.about-page .about-page-banner,
+    body.contact-page .contact-page-banner,
+    body.gallery-page .gallery-page-banner,
+    body.availability-page .availability-page-banner,
+    body.suites-page .suites-page-banner,
+    body.boarding-page .boarding-page-banner,
+    body.daily-care-page .daily-care-page-banner,
+    body.feeding-cleaning-page .feeding-cleaning-page-banner,
+    .home-two-page .home-two-page-banner
+  ) {
+    display: grid !important;
+    justify-content: center !important;
+    justify-items: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    min-height: clamp(280px, 48vw, 390px) !important;
+    padding: clamp(40px, 6vw, 64px) clamp(18px, 4vw, 28px) !important;
+  }
+
+  :root:not([dir="rtl"]) :is(
+    body.about-page .about-page-banner__content,
+    body.contact-page .contact-page-banner__content,
+    body.gallery-page .gallery-page-banner__content,
+    body.availability-page .availability-page-banner__content,
+    body.suites-page .suites-page-banner__content,
+    body.boarding-page .boarding-page-banner__content,
+    body.daily-care-page .daily-care-page-banner__content,
+    body.feeding-cleaning-page .feeding-cleaning-page-banner__content,
+    .home-two-page .home-two-page-banner__content
+  ) {
+    width: min(100%, 720px) !important;
+    max-width: min(100%, 720px) !important;
+    margin: 0 auto !important;
+    margin-inline: auto !important;
+    justify-items: center !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  :root:not([dir="rtl"]) :is(
+    body.about-page .about-page-banner__content h1,
+    body.about-page .about-page-banner__content p,
+    body.contact-page .contact-page-banner__content h1,
+    body.contact-page .contact-page-banner__content p,
+    body.gallery-page .gallery-page-banner__content h1,
+    body.gallery-page .gallery-page-banner__content p,
+    body.availability-page .availability-page-banner__content h1,
+    body.availability-page .availability-page-banner__content p,
+    body.suites-page .suites-page-banner__content h1,
+    body.suites-page .suites-page-banner__content p,
+    body.boarding-page .boarding-page-banner__content h1,
+    body.boarding-page .boarding-page-banner__content p,
+    body.daily-care-page .daily-care-page-banner__content h1,
+    body.daily-care-page .daily-care-page-banner__content p,
+    body.feeding-cleaning-page .feeding-cleaning-page-banner__content h1,
+    body.feeding-cleaning-page .feeding-cleaning-page-banner__content p,
+    .home-two-page .home-two-page-banner__content h1,
+    .home-two-page .home-two-page-banner__content p,
+    .about-page-banner__kicker,
+    .contact-page-banner__kicker,
+    .gallery-page-banner__kicker,
+    .availability-page-banner__kicker,
+    .suites-page-banner__kicker,
+    .boarding-page-banner__kicker,
+    .daily-care-page-banner__kicker,
+    .feeding-cleaning-page-banner__kicker,
+    .about-page-banner__crumbs,
+    .contact-page-banner__crumbs,
+    .gallery-page-banner__crumbs,
+    .availability-page-banner__crumbs,
+    .suites-page-banner__crumbs,
+    .boarding-page-banner__crumbs,
+    .daily-care-page-banner__crumbs,
+    .feeding-cleaning-page-banner__crumbs,
+    .home-two-page .home-two-page-banner__actions,
+    .home-two-page .home-two-page-banner__kicker
+  ) {
+    margin-inline: auto !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 860px) {
+  .navbar {
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .brand-mark {
+    width: clamp(96px, 24vw, 118px);
+  }
+
+  .nav-links {
+    top: calc(100% + 10px);
+    width: 100%;
+    max-height: min(calc(100dvh - 110px), 72vh);
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .nav-main > a,
+  .nav-dropdown > summary,
+  .dropdown-menu a,
+  .nav-pill {
+    min-height: 44px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-shell {
+    padding-inline: 14px;
+    padding-bottom: 34px;
+  }
+
+  main,
+  .home-main {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .navbar {
+    padding: 14px 16px;
+  }
+
+  .nav-preferences,
+  .nav-cta {
+    width: 100%;
+  }
+
+  :is(
+    .hero-actions,
+    .availability-actions,
+    .availability-overview-actions,
+    .availability-booking-actions,
+    .about-promise-actions,
+    .about-closing-actions,
+    .suite-reserve__actions,
+    .boarding-support__actions,
+    .daily-care-updates__actions,
+    .feeding-cleaning-pack__actions,
+    .home-two-page .home-two-page-banner__actions,
+    .home-two-page .booking-request-actions,
+    .home-two-page .availability-request-actions
+  ) {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-shell {
+    padding-inline: 12px;
+    padding-bottom: 30px;
+  }
+
+  .navbar {
+    gap: 10px;
+    padding: 12px 14px;
+    border-radius: 26px;
+  }
+
+  .brand-mark {
+    width: 92px;
+  }
+
+  .menu-button {
+    width: 48px;
+    height: 48px;
+  }
+
+  :root:not([dir="rtl"]) :is(
+    body.about-page .about-page-banner,
+    body.contact-page .contact-page-banner,
+    body.gallery-page .gallery-page-banner,
+    body.availability-page .availability-page-banner,
+    body.suites-page .suites-page-banner,
+    body.boarding-page .boarding-page-banner,
+    body.daily-care-page .daily-care-page-banner,
+    body.feeding-cleaning-page .feeding-cleaning-page-banner,
+    .home-two-page .home-two-page-banner
+  ) {
+    min-height: 250px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  :is(
+    .about-page-banner__content h1,
+    .contact-page-banner__content h1,
+    .gallery-page-banner__content h1,
+    .availability-page-banner__content h1,
+    .suites-page-banner__content h1,
+    .boarding-page-banner__content h1,
+    .daily-care-page-banner__content h1,
+    .feeding-cleaning-page-banner__content h1,
+    .home-two-page .home-two-page-banner__content h1
+  ) {
+    font-size: clamp(2.2rem, 13vw, 2.95rem) !important;
+  }
+
+  :is(
+    .about-page-banner__kicker,
+    .contact-page-banner__kicker,
+    .gallery-page-banner__kicker,
+    .availability-page-banner__kicker,
+    .suites-page-banner__kicker,
+    .boarding-page-banner__kicker,
+    .daily-care-page-banner__kicker,
+    .feeding-cleaning-page-banner__kicker,
+    .home-two-page .home-two-page-banner__kicker
+  ) {
+    min-height: 0;
+    padding: 10px 14px;
+    line-height: 1.35;
+    white-space: normal;
+  }
+}
+
+/* ===== DAILY CARE BANNER CENTER LOCK ===== */
+:root:not([dir="rtl"]) body.daily-care-page .daily-care-page-banner {
+  display: grid !important;
+  justify-content: center !important;
+  justify-items: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+:root:not([dir="rtl"]) body.daily-care-page .daily-care-page-banner__content {
+  width: min(100%, 720px) !important;
+  max-width: min(100%, 720px) !important;
+  margin: 0 auto !important;
+  margin-inline: auto !important;
+  justify-self: center !important;
+  justify-items: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+:root:not([dir="rtl"]) body.daily-care-page .daily-care-page-banner__content h1,
+:root:not([dir="rtl"]) body.daily-care-page .daily-care-page-banner__content p,
+:root:not([dir="rtl"]) body.daily-care-page .daily-care-page-banner__kicker,
+:root:not([dir="rtl"]) body.daily-care-page .daily-care-page-banner__crumbs {
+  margin-inline: auto !important;
+  text-align: center !important;
+}
+
+:root:not([dir="rtl"]) body.daily-care-page .daily-care-page-banner__kicker,
+:root:not([dir="rtl"]) body.daily-care-page .daily-care-page-banner__crumbs {
   justify-content: center !important;
 }
