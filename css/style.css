@@ -17031,3 +17031,46 @@ body.suites-page .suites-page-banner__crumbs span {
 :root:not([dir="rtl"]) body.daily-care-page .daily-care-page-banner__crumbs {
   justify-content: center !important;
 }
+
+/* ===== NAV BUTTON STATE CLEANUP ===== */
+.nav-main > a:hover,
+.nav-main > a:focus-visible,
+.nav-dropdown:hover > summary,
+.nav-dropdown:focus-within > summary,
+.nav-dropdown[open] > summary {
+  background: rgba(239, 123, 35, 0.12) !important;
+  color: var(--ink) !important;
+  border-color: rgba(239, 123, 35, 0.18) !important;
+  box-shadow: inset 0 0 0 1px rgba(239, 123, 35, 0.16) !important;
+  transform: translateY(-2px);
+}
+
+.nav-main > a.active,
+.nav-main > a[aria-current="page"],
+.nav-dropdown--active > summary,
+.nav-pill.is-current {
+  color: var(--white) !important;
+  background: linear-gradient(135deg, var(--apricot), #ff9b34) !important;
+  border-color: transparent !important;
+  box-shadow: 0 14px 26px rgba(239, 123, 35, 0.24) !important;
+}
+
+.nav-mode-button.is-active {
+  color: var(--apricot) !important;
+  background: var(--toggle-bg) !important;
+  border-color: rgba(239, 123, 35, 0.34) !important;
+  box-shadow: 0 0 0 4px rgba(239, 123, 35, 0.08) !important;
+}
+
+.nav-mode-button[data-mode-toggle="theme"].is-active .nav-mode-icon--active svg,
+.nav-mode-button[data-mode-toggle="theme"].is-active .nav-mode-icon--active svg path {
+  color: currentColor !important;
+  fill: currentColor !important;
+  stroke: none !important;
+}
+
+:root[data-theme="dark"] .nav-mode-button.is-active {
+  color: #ffb56c !important;
+  border-color: rgba(255, 157, 63, 0.42) !important;
+  box-shadow: 0 0 0 4px rgba(255, 157, 63, 0.12) !important;
+}
