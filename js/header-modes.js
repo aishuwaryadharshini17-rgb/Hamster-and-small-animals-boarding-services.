@@ -1,4 +1,4 @@
-(() => {
+﻿(() => {
   const root = document.documentElement;
   const storageKeys = {
     theme: "cozyCrittersTheme",
@@ -80,7 +80,53 @@
     renderModeButtons();
   });
 
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+  const navDropdowns = Array.from(document.querySelectorAll(".nav-dropdown"));
+  const headerBrandLinks = Array.from(document.querySelectorAll(".brand"));
+  const navLinkTargets = Array.from(document.querySelectorAll(".nav-links a"));
+  const mobileNavQuery = window.matchMedia("(max-width: 860px)");
+
+  const closeResponsiveNavState = () => {
+    if (menuToggle) {
+      menuToggle.checked = false;
+    }
+
+    navDropdowns.forEach((dropdown) => {
+      dropdown.removeAttribute("open");
+    });
+  };
+
+  const syncResponsiveNavState = () => {
+    if (!mobileNavQuery.matches) {
+      closeResponsiveNavState();
+      return;
+    }
+
+    if (navLinks) {
+      navLinks.scrollTop = 0;
+    }
+  };
+
+  navLinkTargets.forEach((link) => {
+    link.addEventListener("click", closeResponsiveNavState);
+  });
+
+  headerBrandLinks.forEach((link) => {
+    link.addEventListener("click", closeResponsiveNavState);
+  });
+
+  window.addEventListener("resize", syncResponsiveNavState, { passive: true });
+  window.addEventListener("orientationchange", closeResponsiveNavState);
+  window.addEventListener("pageshow", syncResponsiveNavState);
+
+  if (typeof mobileNavQuery.addEventListener === "function") {
+    mobileNavQuery.addEventListener("change", syncResponsiveNavState);
+  }
+
+  syncResponsiveNavState();
   renderModeButtons();
+
   const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
   const careCards = Array.from(document.querySelectorAll("[data-care-card]"));
