@@ -1515,7 +1515,7 @@ main {
   align-items: start;
   gap: 12px;
   height: 100%;
-  padding: clamp(22px, 2.2vw, 26px);
+  padding: clamp(24px, 2.5vw, 30px);
   border-radius: 26px;
   border: 1px solid var(--section-line);
   background:
@@ -2257,7 +2257,10 @@ main {
 }
 
 .testimonial-card {
+  grid-template-rows: auto 1fr auto;
+  gap: 0;
   padding: 24px;
+  text-align: left;
 }
 
 .testimonial-stars {
@@ -2270,6 +2273,7 @@ main {
   display: inline-block;
   margin-top: 18px;
   color: var(--caramel);
+  text-align: left;
 }
 
 .availability-section {
@@ -4252,6 +4256,13 @@ main {
 }
 
 .home-two-page .booking-request-section {
+  padding: clamp(12px, 1.8vw, 18px) clamp(12px, 1.8vw, 18px) clamp(24px, 3vw, 34px);
+  border: 1px solid var(--section-line);
+  border-radius: 44px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 231, 166, 0.3), transparent 34%),
+    linear-gradient(180deg, var(--section-surface-strong), var(--section-surface));
+  box-shadow: var(--card-shadow);
   margin-bottom: clamp(30px, 4vw, 46px);
 }
 
@@ -4723,6 +4734,11 @@ main {
 }
 
 @media (max-width: 760px) {
+  .home-two-page .booking-request-section {
+    padding: 10px 10px 20px;
+    border-radius: 32px;
+  }
+
   .home-two-page .home-two-page-banner {
     min-height: 280px;
     border-radius: 30px;
@@ -15483,6 +15499,7 @@ iframe {
   }
 
   :is(
+    .hero-info-card,
     .contact-intro__copy,
     .contact-intro__cards article,
     .contact-map-card,
@@ -17062,6 +17079,13 @@ body.suites-page .suites-page-banner__crumbs span {
   box-shadow: 0 0 0 4px rgba(239, 123, 35, 0.08) !important;
 }
 
+.nav-mode-button[data-mode-toggle="dir"].is-active {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #7f9d34, #4a6526) !important;
+  border-color: transparent !important;
+  box-shadow: 0 12px 24px rgba(74, 101, 38, 0.22) !important;
+}
+
 .nav-mode-button[data-mode-toggle="theme"].is-active .nav-mode-icon--active svg,
 .nav-mode-button[data-mode-toggle="theme"].is-active .nav-mode-icon--active svg path {
   color: currentColor !important;
@@ -17073,4 +17097,11 @@ body.suites-page .suites-page-banner__crumbs span {
   color: #ffb56c !important;
   border-color: rgba(255, 157, 63, 0.42) !important;
   box-shadow: 0 0 0 4px rgba(255, 157, 63, 0.12) !important;
+}
+
+:root[data-theme="dark"] .nav-mode-button[data-mode-toggle="dir"].is-active {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #7f9d34, #4a6526) !important;
+  border-color: transparent !important;
+  box-shadow: 0 12px 24px rgba(74, 101, 38, 0.24) !important;
 }
