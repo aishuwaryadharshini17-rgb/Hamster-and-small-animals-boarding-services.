@@ -4250,15 +4250,16 @@ main {
 }
 
 /* ===== HOME TWO BOOKING + FAQ ===== */
+.home-two-page .booking-highlight-section,
 .home-two-page .booking-request-section,
 .home-two-page .faq-support-section {
   margin-top: clamp(34px, 4vw, 44px);
 }
 
 .home-two-page .booking-request-section {
-  padding: clamp(12px, 1.8vw, 18px) clamp(12px, 1.8vw, 18px) clamp(24px, 3vw, 34px);
+  padding: clamp(24px, 3vw, 36px);
   border: 1px solid var(--section-line);
-  border-radius: 44px;
+  border-radius: 38px;
   background:
     radial-gradient(circle at 50% 0%, rgba(255, 231, 166, 0.3), transparent 34%),
     linear-gradient(180deg, var(--section-surface-strong), var(--section-surface));
@@ -4352,11 +4353,11 @@ main {
   position: relative;
   overflow: hidden;
   display: grid;
-  grid-template-columns: minmax(120px, 160px) minmax(0, 1fr) minmax(120px, 160px);
+  grid-template-columns: minmax(120px, 160px) minmax(340px, 1fr) minmax(120px, 160px);
   grid-template-areas: "left copy right";
-  align-items: end;
+  align-items: center;
   gap: clamp(16px, 3vw, 28px);
-  padding: clamp(30px, 4vw, 44px) clamp(20px, 4vw, 42px) 148px;
+  padding: clamp(34px, 4vw, 50px) clamp(28px, 5vw, 52px);
   border-radius: 38px;
   background:
     linear-gradient(135deg, #7b9a35 0%, #5f7e2f 42%, #b96d2e 100%);
@@ -4418,7 +4419,8 @@ main {
   grid-area: copy;
   max-width: 640px;
   margin: 0 auto;
-  text-align: center;
+  justify-self: center;
+  text-align: left;
 }
 
 .home-two-page .booking-request-copy .section-eyebrow--light {
@@ -4439,7 +4441,7 @@ main {
 }
 
 .home-two-page .booking-request-copy p {
-  margin: 14px auto 0;
+  margin: 14px 0 0;
   max-width: 54ch;
   color: rgba(255, 248, 239, 0.88);
 }
@@ -4458,13 +4460,11 @@ main {
 .home-two-page .booking-pet--left {
   grid-area: left;
   justify-self: start;
-  transform: translateY(22px);
 }
 
 .home-two-page .booking-pet--right {
   grid-area: right;
   justify-self: end;
-  transform: translateY(22px);
 }
 
 .home-two-page .booking-pet img {
@@ -4477,8 +4477,8 @@ main {
 .home-two-page .booking-request-form-card {
   position: relative;
   z-index: 2;
-  width: min(780px, calc(100% - 28px));
-  margin: -78px auto 0;
+  width: min(840px, 100%);
+  margin: 0 auto;
   padding: clamp(24px, 3.6vw, 32px);
   border-radius: 32px;
   border: 1px solid rgba(154, 84, 39, 0.12);
@@ -4628,7 +4628,7 @@ main {
 }
 
 .home-two-page .faq-support-item[open] summary::after {
-  content: "Ã¢Ë†â€™";
+  content: "\2212";
 }
 
 .home-two-page .faq-support-answer {
@@ -4713,18 +4713,18 @@ main {
     grid-template-areas:
       "copy copy"
       "left right";
-    align-items: end;
-    padding-bottom: 136px;
+    align-items: center;
+    padding: 30px 28px;
   }
 
   .home-two-page .booking-pet--left,
   .home-two-page .booking-pet--right {
-    transform: translateY(12px);
+    transform: none;
   }
 
   .home-two-page .booking-request-form-card {
-    width: min(780px, calc(100% - 20px));
-    margin-top: -64px;
+    width: min(840px, 100%);
+    margin-top: 0;
   }
 
   .home-two-page .faq-support-cta {
@@ -4735,7 +4735,7 @@ main {
 
 @media (max-width: 760px) {
   .home-two-page .booking-request-section {
-    padding: 10px 10px 20px;
+    padding: 18px;
     border-radius: 32px;
   }
 
@@ -4745,7 +4745,7 @@ main {
   }
 
   .home-two-page .booking-request-banner {
-    padding: 26px 18px 118px;
+    padding: 26px 18px;
     border-radius: 30px;
   }
 
@@ -4755,8 +4755,8 @@ main {
   }
 
   .home-two-page .booking-request-form-card {
-    width: calc(100% - 12px);
-    margin-top: -54px;
+    width: 100%;
+    margin-top: 0;
     padding: 20px;
     border-radius: 26px;
   }
@@ -4804,7 +4804,7 @@ main {
 
   .home-two-page .booking-request-banner {
     gap: 14px 18px;
-    padding-bottom: 104px;
+    padding: 22px 16px;
   }
 
   .home-two-page .booking-request-copy h2 {
